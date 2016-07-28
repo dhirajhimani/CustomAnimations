@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/ptr_headerContainer">
+
+        <RelativeLayout
+            android:id="@+id/ptr_id_header"
+            style="@style/ptr_header">
+
+            <!--<ImageView-->
+                <!--android:id="@+id/image_header"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="150dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:scaleType="fitXY"-->
+                <!--android:src="@drawable/bg_clound"-->
+                <!--android:visibility="visible"/>-->
+
+            <RelativeLayout
+                android:id="@+id/image_header"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:scaleType="fitXY">
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/image_fly_obj"
+                android:visibility="gone"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/img_plane"/>
+        </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="NotificationView">
+        <attr name="image_width" format="dimension" />
+        <attr name="image_height" format="dimension" />
+        <attr name="image_padding" format="dimension" />
+
+        <attr name="textview_width"  format="dimension" />
+        <attr name="textview_height"  format="dimension" />
+        <attr name="textview_textsize"  format="dimension" />
+        <attr name="textview_margin"  format="dimension" />
+    </declare-styleable>
+</resources>

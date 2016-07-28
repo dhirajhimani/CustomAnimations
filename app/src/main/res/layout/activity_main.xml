@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@android:color/white"
+              android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_notification_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:layout_weight="1"
+        android:background="@android:color/darker_gray"
+        android:text="Notification Activity"
+        android:textSize="25sp"/>
+
+    <Button
+        android:id="@+id/btn_search_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:layout_weight="1"
+        android:background="@android:color/darker_gray"
+        android:text="Search Activity"
+        android:textSize="25sp"/>
+
+    <Button
+        android:id="@+id/btn_pulltorefresh_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:layout_weight="1"
+        android:background="@android:color/darker_gray"
+        android:text="Pull To Refresh Activity"
+        android:textSize="25sp"/>
+
+</LinearLayout>
