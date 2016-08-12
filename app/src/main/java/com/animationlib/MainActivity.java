@@ -5,6 +5,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+/**
+ * Main activity conatins the sample activity, all the library code is in the particular packages,
+ * like searchanim package contains class AnimationUtils , AnimationUtils is self independent
+ * class which can be imported to other projects and used.
+ */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
 	private static final String TAG = "NotificationAlertActivity";
