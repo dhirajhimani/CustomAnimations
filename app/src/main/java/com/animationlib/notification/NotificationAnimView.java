@@ -59,8 +59,8 @@ public class NotificationAnimView extends RelativeLayout {
 	}
 
 	private void init(Context context, AttributeSet attrs, int defStyleAttr) {
-		inflate(getContext(), R.layout.notification_view, this);
-		initViews();
+		inflate(context, R.layout.notification_view, this);
+		initViews(context);
 
 		if (attrs == null) {
 			return;
@@ -120,13 +120,13 @@ public class NotificationAnimView extends RelativeLayout {
 	/**
 	 * Initialise Views and assign deafult values
 	 */
-	private void initViews() {
+	private void initViews(Context context) {
 		mImageNotification = (ImageView) findViewById(R.id.image_notification);
 		mTextBadge = (TextView) findViewById(R.id.text_badge);
 		// Anims for img_badge
-		mZoomInAnim = AnimationUtils.loadAnimation(getContext(), R.anim.zoomin);
-		mZoomOutAnim = AnimationUtils.loadAnimation(getContext(), R.anim.zoomout);
-		mShakeAnim = AnimationUtils.loadAnimation(getContext(), R.anim.shake);
+		mZoomInAnim = AnimationUtils.loadAnimation(context, R.anim.zoomin);
+		mZoomOutAnim = AnimationUtils.loadAnimation(context, R.anim.zoomout);
+		mShakeAnim = AnimationUtils.loadAnimation(context, R.anim.shake);
 		//init listener
 		mShakeAnim.setAnimationListener(animationListener);
 	}

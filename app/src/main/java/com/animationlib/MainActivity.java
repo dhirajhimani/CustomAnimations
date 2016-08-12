@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 				startActivity(new Intent(MainActivity.this, SearchAnimActivity.class));
 				break;
 			case R.id.btn_pulltorefresh_activity :
-				startActivity(new Intent(MainActivity.this, PullToRefreshListViewSampleActivity.class));
+				startActivity(new Intent(MainActivity.this, PTRSampleActivity.class));
 				break;
 
 		}

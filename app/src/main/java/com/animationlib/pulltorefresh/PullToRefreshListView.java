@@ -46,9 +46,8 @@ public class PullToRefreshListView extends ListView{
     private static final int   BOUNCE_ANIMATION_DURATION       = 700;
     private static final int   BOUNCE_ANIMATION_DELAY          = 100;
     private static final float BOUNCE_OVERSHOOT_TENSION        = 1.4f;
-    private static final int   ROTATE_ARROW_ANIMATION_DURATION = 250;
 
-    private static enum State{
+    private enum State{
         PULL_TO_REFRESH,
         RELEASE_TO_REFRESH,
         REFRESHING
@@ -64,7 +63,7 @@ public class PullToRefreshListView extends ListView{
         /**
          * Method to be called when a refresh is requested
          */
-        public void onRefresh();
+        void onRefresh();
     }
 
     private static int measuredHeaderHeight;
@@ -72,8 +71,6 @@ public class PullToRefreshListView extends ListView{
     private boolean scrollbarEnabled;
     private boolean bounceBackHeader;
     private boolean lockScrollWhileRefreshing;
-    private boolean showLastUpdatedText;
-    private int transformX = 0;
     private String TAG = "PullToRefreshListView";
 
     private float                   previousY;
@@ -89,7 +86,6 @@ public class PullToRefreshListView extends ListView{
     private OnRefreshListener       onRefreshListener;
     private ImageView               image_fly_obj;
 
-    private int abs    = ArcTranslateAnimation.ABSOLUTE;
     private float startX = 0;
     private float finalX = 1000;
     private float startY = 400;
@@ -184,6 +180,7 @@ public class PullToRefreshListView extends ListView{
         image_fly_obj = (ImageView) header.findViewById(R.id.image_fly_obj);
 
         image_header.addView(new MovingBackGround(getContext()));
+        int abs = ArcTranslateAnimation.ABSOLUTE;
         arcAnim = new ArcTranslateAnimation(
                 abs, startX, abs, finalX, abs, startY, abs, finalY
         ){
@@ -303,7 +300,6 @@ public class PullToRefreshListView extends ListView{
                         }
                     }
                 }
-
                 break;
         }
 
@@ -471,7 +467,6 @@ public class PullToRefreshListView extends ListView{
                     requestLayout();
                 }
             }
-
             getViewTreeObserver().removeGlobalOnLayoutListener(this);
         }
     }

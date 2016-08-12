@@ -18,8 +18,9 @@ import android.widget.Toast;
 import com.animationlib.pulltorefresh.PullToRefreshListView;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
-public class PullToRefreshListViewSampleActivity extends Activity {
+public class PTRSampleActivity extends Activity {
 
 
 
@@ -99,7 +100,7 @@ public class PullToRefreshListViewSampleActivity extends Activity {
 
 				PullToRefreshListViewSampleAdapter.ViewHolder viewHolder = (PullToRefreshListViewSampleAdapter.ViewHolder) arg1.getTag();
 				if (viewHolder.name != null){
-					Toast.makeText(PullToRefreshListViewSampleActivity.this, viewHolder.name.getText(), Toast.LENGTH_SHORT).show();
+					Toast.makeText(PTRSampleActivity.this, viewHolder.name.getText(), Toast.LENGTH_SHORT).show();
 				}					
 			}
 		});
@@ -168,28 +169,7 @@ public class PullToRefreshListViewSampleActivity extends Activity {
 			// Here add your code to load the data for example from a webservice or DB
 			
 			items = new ArrayList<String>();
-
-			items.add("Ajax Amsterdam");
-			items.add("Barcelona");
-			items.add("Manchester United");
-			items.add("Chelsea");
-			items.add("Real Madrid");
-			items.add("Bayern Munchen");
-			items.add("Internazionale");
-			items.add("Valencia");
-			items.add("Arsenal");
-			items.add("AS Roma");
-			items.add("Tottenham Hotspur");
-			items.add("PSV");
-			items.add("Olympique Lyon");
-			items.add("AC Milan");
-			items.add("Dortmund");
-			items.add("Schalke 04");
-			items.add("Twente");
-			items.add("Porto");
-			items.add("Juventus");
-
-			
+			items.addAll(Arrays.asList(getResources().getStringArray(R.array.sample_array)));
 			// MANDATORY: Notify that the data has changed
 			notifyDataSetChanged();
 		}
@@ -215,7 +195,7 @@ public class PullToRefreshListViewSampleActivity extends Activity {
 
 			String record = (String) getItem(position);
 
-			LayoutInflater inflater = PullToRefreshListViewSampleActivity.this.getLayoutInflater();
+			LayoutInflater inflater = PTRSampleActivity.this.getLayoutInflater();
 
 			ViewHolder viewHolder = new ViewHolder();
 

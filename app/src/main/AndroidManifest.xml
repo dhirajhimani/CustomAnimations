@@ -17,7 +17,7 @@
         </activity>
         <activity android:name=".NotificationAlertActivity"></activity>
         <activity android:name=".SearchAnimActivity"></activity>
-        <activity android:name=".PullToRefreshListViewSampleActivity"></activity>
+        <activity android:name=".PTRSampleActivity"></activity>
     </application>
 
 </manifest>

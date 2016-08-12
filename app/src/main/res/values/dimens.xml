@@ -10,4 +10,6 @@
     <dimen name="notification_default_badge_text_size">5sp</dimen>
     <dimen name="notification_default_badge_text_margin">20dp</dimen>
     <dimen name="edit_text_search_pad">10dp</dimen>
+    <dimen name="button_margin_main_acitivity">20dp</dimen>
+    <dimen name="btn_text_size_main_activity">25sp</dimen>
 </resources>

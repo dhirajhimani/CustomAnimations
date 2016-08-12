@@ -3,4 +3,26 @@
 
     <string name="edit">Edit</string>
     <string name="delete">Delete</string>
+
+    <string-array name="sample_array">
+        <item>Ajax Amsterdam</item>
+        <item>Barcelona</item>
+        <item>Manchester United</item>
+        <item>Chelsea</item>
+        <item>Real Madrid</item>
+        <item>Bayern Munchen</item>
+        <item>Internazionale</item>
+        <item>Valencia</item>
+        <item>Arsenal</item>
+        <item>AS Roma</item>
+        <item>Tottenham Hotspur</item>
+        <item>PSV</item>
+        <item>Olympique Lyon</item>
+        <item>AC Milan</item>
+        <item>Dortmund</item>
+        <item>Schalke 04</item>
+        <item>Twente</item>
+        <item>Porto</item>
+        <item>Juventus</item>
+    </string-array>
 </resources>
