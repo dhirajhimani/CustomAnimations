@@ -2,4 +2,11 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="text_badge_text_size">25sp</dimen>
+    <dimen name="image_notification_pad">5dp</dimen>
+    <dimen name="notification_default_image_width">200dp</dimen>
+    <dimen name="notification_default_image_pad">5dp</dimen>
+    <dimen name="notification_default_badge_text_width">50dp</dimen>
+    <dimen name="notification_default_badge_text_size">5sp</dimen>
+    <dimen name="notification_default_badge_text_margin">20dp</dimen>
 </resources>

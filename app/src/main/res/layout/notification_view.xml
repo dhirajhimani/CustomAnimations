@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:padding="5dp"
+        android:padding="@dimen/image_notification_pad"
         android:scaleType="fitCenter"
         android:src="@drawable/img_bell"/>
 
@@ -22,7 +22,7 @@
         android:background="@drawable/img_badge"
         android:gravity="center"
         android:text="1"
-        android:textSize="25sp"
+        android:textSize="@dimen/text_badge_text_size"
         android:textColor="@android:color/black"
         android:textStyle="bold"
         android:visibility="gone"/>

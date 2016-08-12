@@ -13,8 +13,8 @@ public class NotificationAlertActivity extends AppCompatActivity {
 
 	private static final String TAG = "NotificationAlertActivity";
 	private Button btnNotify;
-	private int count = 0;
-	private NotificationAnimView notificationAnimView;
+	private int mBadgeCount = 0;
+	private NotificationAnimView mNotificationAnimView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,12 +25,12 @@ public class NotificationAlertActivity extends AppCompatActivity {
 		// Set a toolbar to replace the action bar.
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
-		notificationAnimView = (NotificationAnimView) findViewById(R.id.custom_animview);
+		mNotificationAnimView = (NotificationAnimView) findViewById(R.id.custom_animview);
 
 		btnNotify.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				notificationAnimView.notifyUser(++count);
+				mNotificationAnimView.notifyUser(++mBadgeCount);
 			}
 		});
 
