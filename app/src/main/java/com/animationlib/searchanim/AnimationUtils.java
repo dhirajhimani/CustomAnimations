@@ -8,12 +8,21 @@ import android.view.animation.AnimationSet;
 import android.view.animation.Interpolator;
 import android.view.animation.Transformation;
 
+/**
+ * The type Animation utils.
+ */
 public class AnimationUtils {
 
 	// http://easings.net/
 	private static String TAG = "AnimationUtils";
 	private static Interpolator easeInOutQuart = PathInterpolatorCompat.create(0.77f, 0f, 0.175f, 1f);
 
+	/**
+	 * Expand animation.
+	 *
+	 * @param view the view
+	 * @return the animation
+	 */
 	public static Animation expand(final View view) {
 		int matchParentMeasureSpec = View.MeasureSpec.makeMeasureSpec(((View) view.getParent()).getWidth(), View.MeasureSpec.EXACTLY);
 		int wrapContentMeasureSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
@@ -53,18 +62,22 @@ public class AnimationUtils {
 		return (int) (view.getMeasuredHeight() / view.getContext().getResources().getDisplayMetrics().density);
 	}
 
+	/**
+	 * Collapse animation.
+	 *
+	 * @param view              the view
+	 * @param animationListener the animation listener
+	 * @return the animation
+	 */
 	public static Animation collapse(final View view, Animation.AnimationListener animationListener) {
 		final int initialWidth = view.getMeasuredWidth();
 		final int durationMillis = computeDurationFromWidth(view);
-//		final int durationMillis = 1000;
 		AnimationSet animationSet = new AnimationSet(true);
-//		final int closingWidth = initialWidth / 5;
 
 		final Animation animation = new Animation() {
 			@Override
 			protected void applyTransformation(float interpolatedTime, Transformation t) {
 				int width = initialWidth - (int) (initialWidth * interpolatedTime);
-//				Log.d(TAG, "width = " + width);
 				if (interpolatedTime == 1) {
 					view.setVisibility(View.GONE);
 				} else {

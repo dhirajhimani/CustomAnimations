@@ -9,4 +9,5 @@
     <dimen name="notification_default_badge_text_width">50dp</dimen>
     <dimen name="notification_default_badge_text_size">5sp</dimen>
     <dimen name="notification_default_badge_text_margin">20dp</dimen>
+    <dimen name="edit_text_search_pad">10dp</dimen>
 </resources>

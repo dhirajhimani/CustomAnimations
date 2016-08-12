@@ -13,23 +13,23 @@ import com.animationlib.searchanim.AnimationUtils;
 
 public class SearchAnimActivity extends AppCompatActivity {
 
-	private EditText inputSearchEditText;
-	private ProgressBar progressBar;
+	private EditText mInputSearchEditText;
+	private ProgressBar mProgressBar;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.search_layout);
 		initProgress();
-		inputSearchEditText =(EditText)findViewById(R.id.inputSearchEditText);
-		inputSearchEditText.setOnKeyListener(new View.OnKeyListener() {
+		mInputSearchEditText =(EditText)findViewById(R.id.edit_text_search);
+		mInputSearchEditText.setOnKeyListener(new View.OnKeyListener() {
 			public boolean onKey(View v, int keyCode, KeyEvent event) {
 				// If the event is a key-down event on the "enter" button
 				if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
 						(keyCode == KeyEvent.KEYCODE_ENTER)) {
 					// Perform action on key press
-					Toast.makeText(SearchAnimActivity.this, inputSearchEditText.getText(), Toast.LENGTH_SHORT).show();
-					AnimationUtils.collapse(inputSearchEditText, new Animation.AnimationListener() {
+					Toast.makeText(SearchAnimActivity.this, mInputSearchEditText.getText(), Toast.LENGTH_SHORT).show();
+					AnimationUtils.collapse(mInputSearchEditText, new Animation.AnimationListener() {
 						@Override
 						public void onAnimationStart(Animation animation) {
 
@@ -37,7 +37,7 @@ public class SearchAnimActivity extends AppCompatActivity {
 
 						@Override
 						public void onAnimationEnd(Animation animation) {
-							progressBar.setVisibility(View.VISIBLE);
+							mProgressBar.setVisibility(View.VISIBLE);
 						}
 
 						@Override
@@ -54,9 +54,10 @@ public class SearchAnimActivity extends AppCompatActivity {
 
 	/**
 	 * We can make progress update according to our requirement
+	 * Custom progress can be defined here.
 	 */
 	private void initProgress(){
-		progressBar = (ProgressBar) findViewById(R.id.progressBar);
+		mProgressBar = (ProgressBar) findViewById(R.id.progress_bar);
 	}
 
 }
