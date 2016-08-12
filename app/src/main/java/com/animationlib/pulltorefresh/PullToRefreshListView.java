@@ -86,6 +86,7 @@ public class PullToRefreshListView extends ListView{
     private OnRefreshListener       onRefreshListener;
     private ImageView               image_fly_obj;
 
+    //These values are used for start and end points of the path
     private float startX = 0;
     private float finalX = 1000;
     private float startY = 400;
